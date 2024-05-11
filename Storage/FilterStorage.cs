@@ -20,24 +20,6 @@ using static OverlayModes;
 
 namespace LStorage
 {
-	public static class StringConst
-	{
-
-        //static T Invoke<T>(this object O,string Name) => Traverse.Create(O).Method(Name).GetValue<T>();
-
-        public static LocString CheckboxLabel = "STRINGS.ELEMENTS.STATE.LIQUID";   //液体	STRINGS.ELEMENTS.STATE.LIQUID
-		public static LocString CheckboxTooltip = "STRINGS.ELEMENTS.STATE.GAS";     //气体	STRINGS.ELEMENTS.STATE.GAS
-		public static LocString TEMPERATURE = "STRINGS.UI.NEWBUILDCATEGORIES.TEMPERATURE.NAME"; //温度	STRINGS.UI.NEWBUILDCATEGORIES.TEMPERATURE.NAME
-
-		static void AddString(string ID,string Name,string Value)=> Strings.Add(new string[]{string.Join(".","STRINGS.BUILDINGS.PREFABS",ID,Name),Value});
-        public static void AddString(string ID,string Name,string Effect,string Desc)
-        {
-			ID=ID.ToUpper();
-			AddString(ID,"NAME",Name);
-			AddString(ID,"EFFECT",Effect);
-			AddString(ID,"DESC",Desc);
-        }
-    }
     public class FilterStorage:KMonoBehaviour//, ICheckboxControl
     {
         class ListIndex
@@ -308,15 +290,15 @@ namespace LStorage
 
         public override BuildingDef CreateBuildingDef()
         {
-            string anim = "filterstorage_kanim";
             float 建造时间 = 10f;
 			float[] 建材质量 = TUNING.BUILDINGS.CONSTRUCTION_MASS_KG.TIER2;
 			string[] 建材 = MATERIALS.RAW_METALS;
 			//string[] 建材 = { "Metal", "RefinedMetal" };
 			var EffectorValues = default(EffectorValues);//装饰-噪音
-			var Def = BuildingTemplates.CreateBuildingDef(ID, 1, 2, anim, 30, 建造时间, 建材质量, 建材, 3200, BuildLocationRule.Anywhere, EffectorValues, EffectorValues, 0.2f);
-            Def.ThermalConductivity=0;
-            Def.OverheatTemperature=Def.FatalHot=3273.15f;
+			var Def = BuildingTemplates.CreateBuildingDef(ID, 1, 2,"filterstorage_kanim", 30, 建造时间, 建材质量, 建材, 3200, BuildLocationRule.Anywhere, EffectorValues, EffectorValues, 0.2f);
+            Def.ThermalConductivity=0;//导热率
+            Def.OverheatTemperature=3273.15f;//过热温度
+            //Def.OverheatTemperature=Def.FatalHot=3273.15f;=Def.BaseMeltingPoint
 
             Def.InputConduitType =
 			Def.OutputConduitType = ConduitType;
