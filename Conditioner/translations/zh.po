@@ -1,0 +1,42 @@
+﻿
+#注释 msgid 翻译前 msgstr 翻译后
+
+msgctxt "LStudioONI.StringConst.CONTROL_TITLE"
+msgid "温度调节"
+msgstr "温度调节"
+
+msgctxt "LStudioONI.StringConst.CONTROL_TOOLTIP"
+msgid "将经过的内容物温度调节至<style=\"KKeyword\">{0}{1}</style>."
+
+msgctxt "LStudioONI.StringConst.TARGETTEMP"
+msgid "目标<link=\"HEAT\">温度</link>：{0}"
+
+msgctxt "LStudioONI.StringConst.TARGETWATT"
+msgid "消耗<link=\"HEAT\">电力</link>：{0}"
+
+msgctxt "LStudioONI.StringConst.TARGETTEMP_TOOLTIPS"
+msgid "将内容物<link=\"HEAT\">温度</link>调节至{0}"
+
+msgctxt "LStudioONI.StringConst.TARGETWATT_TOOLTIPS"
+msgid "当前调节所需<link=\"HEAT\">电力</link>{0}"
+
+msgctxt "LStudioONI.StringConst.CALORIES"
+msgid "<link=\"HEAT\">热量</link>：{0}（近似值）"
+
+msgctxt "LStudioONI.StringConst.CONDITIONING"
+msgid "<link=\"HEAT\">调节温度</link>：{0}"
+
+msgctxt "LStudioONI.StringConst.TOOLTIPS_CONDITIONING"
+msgid "调节管内<style=\"KKeyword\">{1}</style><style=\"KKeyword\">温度</style><b>{0}</b>"
+
+msgctxt "LStudioONI.StringConst.TOOLTIPS_CONDITIONER"
+msgid ""
+"基于抽取<style=\"KKeyword\">{0}</style>的<style=\"KKeyword\">量</style>和"
+"<style=\"KKeyword\">比热容</style>进行<style=\"KKeyword\">热量</style>交换\n"
+
+msgctxt "LStudioONI.StringConst.TOOLTIPS_WATER"
+msgid "使10千克的<link=\"WATER\">水</link><b>{1}</b>会交换<style=\"consumed\">{0}</style>的热量"
+
+msgctxt "LStudioONI.StringConst.TOOLTIPS_OXYGEN"
+msgid "使1千克的<link=\"OXYGEN\">氧气</link><b>{1}</b>会交换<b>{0}</b>的热量"
+
